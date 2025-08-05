@@ -6,7 +6,15 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-        <div className="footer-logo">logo</div>
+        <div className="footer-logo-wrapper">
+          <div className="footer-logo">logo</div>
+          <p className="footer-description">
+            At Hummazing, we’ve turned a simple Middle Eastern classic into a
+            global food experience. Born from a love of bold flavors and Tasty
+            Meals.
+          </p>
+        </div>
+
         <div className="footer-nav">
           <a href="#home">Home</a>
           <a href="#about">About</a>
@@ -14,6 +22,7 @@ const Footer = () => {
           <a href="#menu">Menu</a>
           <a href="#contact">Contact</a>
         </div>
+
         <div className="footer-social">
           <a
             href="https://facebook.com"
@@ -38,6 +47,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
+
       <div className="footer-bottom">
         <p>Copyright &copy; 2025 Hummazing. All rights reserved.</p>
       </div>

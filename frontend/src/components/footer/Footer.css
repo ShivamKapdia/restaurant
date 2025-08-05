@@ -62,3 +62,14 @@
 .footer-bottom p {
   margin: 0;
 }
+
+.footer-logo-wrapper {
+  width: 350px;
+}
+
+.footer-description {
+  font-size: 0.85rem;
+  color: #ccc;
+  margin-top: 8px;
+  line-height: 1.3;
+}
