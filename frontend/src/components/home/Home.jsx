@@ -6,7 +6,7 @@ import img from "../../assets/bg-image2.png";
 import food1 from "../../assets/food1.png";
 import food2 from "../../assets/food2.png";
 import fastDelivery from "../../assets/fast-delivery.png";
-import freshIngredients from "../../assets/fresh-incredients.png"; // Corrected typo
+import freshIngredients from "../../assets/fresh-incredients.png";
 import hygienicKitchens from "../../assets/hygienic-kitchens.png";
 import "./Home.css";
 
@@ -15,6 +15,7 @@ const Home = () => {
   const aboutRef = useRef(null);
   const featuresRef = useRef(null);
   const faqRef = useRef(null);
+  const testimonialsRef = useRef(null);
 
   useEffect(() => {
     // Hero text animation
@@ -31,6 +32,7 @@ const Home = () => {
       const about = aboutRef.current;
       const features = featuresRef.current;
       const faq = faqRef.current;
+      const testimonials = testimonialsRef.current;
 
       if (about) {
         const rect = about.getBoundingClientRect();
@@ -50,6 +52,13 @@ const Home = () => {
         const rect = faq.getBoundingClientRect();
         if (rect.top <= window.innerHeight - 100) {
           faq.classList.add("show-faq");
+        }
+      }
+
+      if (testimonials) {
+        const rect = testimonials.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          testimonials.classList.add("show-testimonials");
         }
       }
     };
@@ -104,7 +113,10 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="testimonials-section">
+      <section
+        ref={testimonialsRef}
+        className="testimonials-section hidden-testimonials"
+      >
         <div className="testimonial-header text-center">
           <div className="tagline">WHAT OUR GUESTS SAY</div>
           <h2 className="title">Testimonials</h2>
