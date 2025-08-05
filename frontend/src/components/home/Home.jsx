@@ -103,6 +103,64 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Testimonials Section */}
+      <section className="testimonials-section">
+        <div className="testimonial-header text-center">
+          <div className="tagline">WHAT OUR GUESTS SAY</div>
+          <h2 className="title">Testimonials</h2>
+          <p className="description">
+            Hear from our happy customers who’ve discovered the bold flavors and
+            wholesome experience of Hummazing’s signature hummus creations.
+          </p>
+        </div>
+        <div className="testimonial-grid">
+          <div className="testimonial-card rotate-left">
+            <p className="quote">
+              “Hummazing isn’t just about hummus—it’s a whole experience! The
+              Mediterranean Bowl was packed with flavor and so fresh. Finally,
+              healthy food that excites my taste buds!”
+            </p>
+            <div className="author">
+              <img src="https://i.imgur.com/tVZcqfV.png" alt="Priya Deshmukh" />
+              <div>
+                <strong>Priya Deshmukh</strong>
+                <p>Mumbai Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="testimonial-card rotate-right">
+            <p className="quote">
+              “I never knew hummus could be this versatile. From dips to hearty
+              bowls, everything tastes gourmet. Hummazing has made tasty eating
+              so much easier and fun for my family!”
+            </p>
+            <div className="author">
+              <img src="https://i.imgur.com/CrcuBMv.png" alt="Anjali Nair" />
+              <div>
+                <strong>Anjali Nair</strong>
+                <p>Bengaluru Customer</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="testimonial-card rotate-left">
+            <p className="quote">
+              “Tried Hummazing wraps on a friend’s recommendation and now I’m
+              hooked! Great taste, super quick delivery, and guilt-free
+              indulgence.”
+            </p>
+            <div className="author">
+              <img src="https://i.imgur.com/OeT3qIn.png" alt="Rohan Mehta" />
+              <div>
+                <strong>Rohan Mehta</strong>
+                <p>Pune Customer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section ref={featuresRef} className="features-section hidden-features">
         <div className="feature-item">
