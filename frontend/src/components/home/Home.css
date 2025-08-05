@@ -1,4 +1,154 @@
-.img-left-zero {
-  margin-left: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.faded-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   display: block;
+
+  /* Fade from left (transparent) to right (fully visible) */
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  mask-image: linear-gradient(to right, transparent, black);
+}
+
+.text-overlay {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 10;
+  width: 50%;
+  transition: all 1s ease;
+}
+
+.hidden-text {
+  transform: translateY(200px);
+  opacity: 0;
+  color: #999;
+}
+
+.show-text {
+  transform: translateY(0);
+  opacity: 1;
+  color: #222;
+}
+
+.text-box {
+  background: transparent;
+  border: 2px solid #333;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-bottom: 10px;
+  transform: rotate(5deg);
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #5c4033;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #4a3428;
+}
+
+/* New about section styles */
+.about-section {
+  background-color: #f5f5e0;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image-gallery {
+  display: flex;
+  gap: 20px;
+  max-width: 50%;
+}
+
+.food-image {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: rotate(-5deg);
+}
+
+.food-image-1 {
+  transform: rotate(-5deg) translateY(-20px);
+}
+
+.food-image-2 {
+  transform: rotate(5deg) translateY(20px);
+}
+
+.content-box {
+  max-width: 50%;
+  padding-left: 20px;
+}
+
+.crafted-tag {
+  display: inline-block;
+  background: #5c4033;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  transform: rotate(-4deg); /* Tilt the crafted tag */
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+.about-btn {
+  background-color: #5c4033;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.about-btn:hover {
+  background-color: #4a3428;
 }
