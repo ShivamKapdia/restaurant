@@ -42,9 +42,13 @@ const Home = () => {
       </div>
       {/* New section below the image */}
       <section className="about-section">
+        <div className="image-gallery ms-5">
+          <img src={food1} alt="Food 1" className="food-image food-image-1" />
+          <img src={food2} alt="Food 2" className="food-image food-image-2" />
+        </div>
         <div className="content-box">
-          <span className="crafted-tag">— CRAFTED WITH PASSION</span>
-          <h2>
+          <span className="crafted-tag mb-5">— CRAFTED WITH PASSION</span>
+          <h2 className="mb-5">
             Hummazing – More <br /> Than Hummus, It’s <br /> an Emotion
           </h2>
           <p>
@@ -54,11 +58,7 @@ const Home = () => {
             simple hummus recipe quickly became a flavorful movement. Friends
             and family said, "This isn’t just hummus... this is an emotion!"
           </p>
-          <button className="about-btn">ABOUT US</button>
-        </div>
-        <div className="image-gallery">
-          <img src={food1} alt="Food 1" className="food-image food-image-1" />
-          <img src={food2} alt="Food 2" className="food-image food-image-2" />
+          <button className="about-btn mt-5">ABOUT US</button>
         </div>
       </section>
     </>

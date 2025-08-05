@@ -85,7 +85,7 @@ p {
 /* New about section styles */
 .about-section {
   background-color: #f5f5e0;
-  padding: 50px 20px;
+  padding: 128px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
