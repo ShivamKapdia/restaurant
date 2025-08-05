@@ -1,0 +1,20 @@
+.underline {
+  width: 150px;
+  height: 4px;
+  background-color: #0d6efd;
+  margin: 0 auto;
+}
+
+.stars {
+  color: #ffc107;
+}
+
+.map-iframe {
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .map-iframe {
+    height: 300px;
+  }
+}
