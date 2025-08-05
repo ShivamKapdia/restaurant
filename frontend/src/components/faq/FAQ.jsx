@@ -1,7 +1,7 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, forwardRef } from "react";
 import "./FAQ.css";
 
-const FAQ = () => {
+const FAQ = forwardRef(({ ...props }, ref) => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [answerHeights, setAnswerHeights] = useState({});
   const answerRefs = useRef([]);
@@ -67,7 +67,7 @@ const FAQ = () => {
   }, [activeIndex, faqs, answerHeights]);
 
   return (
-    <div className="faq-container">
+    <div ref={ref} className="faq-container hidden-faq">
       <h1 className="faq-title">FAQS</h1>
       {faqs.map((faq, index) => (
         <div
@@ -91,6 +91,6 @@ const FAQ = () => {
       ))}
     </div>
   );
-};
+});
 
 export default FAQ;

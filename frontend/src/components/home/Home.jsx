@@ -5,14 +5,19 @@ import Footer from "../footer/Footer.jsx";
 import img from "../../assets/bg-image2.png";
 import food1 from "../../assets/food1.png";
 import food2 from "../../assets/food2.png";
+import fastDelivery from "../../assets/fast-delivery.png";
+import freshIngredients from "../../assets/fresh-incredients.png"; // Corrected typo
+import hygienicKitchens from "../../assets/hygienic-kitchens.png";
 import "./Home.css";
 
 const Home = () => {
   const textRef = useRef(null);
   const aboutRef = useRef(null);
+  const featuresRef = useRef(null);
+  const faqRef = useRef(null);
 
   useEffect(() => {
-    // Show top overlay text
+    // Hero text animation
     const element = textRef.current;
     if (element) {
       element.classList.add("hidden-text");
@@ -21,13 +26,30 @@ const Home = () => {
       }, 100);
     }
 
-    // Scroll animation for about section
+    // Scroll animations
     const handleScroll = () => {
       const about = aboutRef.current;
+      const features = featuresRef.current;
+      const faq = faqRef.current;
+
       if (about) {
         const rect = about.getBoundingClientRect();
         if (rect.top <= window.innerHeight - 100) {
           about.classList.add("show-about");
+        }
+      }
+
+      if (features) {
+        const rect = features.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          features.classList.add("show-features");
+        }
+      }
+
+      if (faq) {
+        const rect = faq.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          faq.classList.add("show-faq");
         }
       }
     };
@@ -59,7 +81,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* New section below the image */}
+      {/* About Section */}
       <section ref={aboutRef} className="about-section hidden-about">
         <div className="image-gallery ms-5">
           <img src={food1} alt="Food 1" className="food-image food-image-1" />
@@ -81,7 +103,35 @@ const Home = () => {
         </div>
       </section>
 
-      <FAQ />
+      {/* Features Section */}
+      <section ref={featuresRef} className="features-section hidden-features">
+        <div className="feature-item">
+          <img
+            src={fastDelivery}
+            alt="Fast Delivery"
+            className="feature-image"
+          />
+          <h3>Fast Delivery</h3>
+        </div>
+        <div className="feature-item">
+          <img
+            src={freshIngredients}
+            alt="Fresh Ingredients"
+            className="feature-image"
+          />
+          <h3>Fresh Ingredients</h3>
+        </div>
+        <div className="feature-item">
+          <img
+            src={hygienicKitchens}
+            alt="Hygienic Kitchens"
+            className="feature-image"
+          />
+          <h3>Hygienic Kitchens</h3>
+        </div>
+      </section>
+
+      <FAQ ref={faqRef} />
       <Footer />
     </>
   );
