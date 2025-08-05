@@ -3,14 +3,16 @@ import Navbar from "../navbar/Navbar.jsx";
 import FAQ from "../faq/FAQ.jsx";
 import Footer from "../footer/Footer.jsx";
 import img from "../../assets/bg-image2.png";
-import food1 from "../../assets/food1.png"; // Adjust the path as needed
-import food2 from "../../assets/food2.png"; // Adjust the path as needed
+import food1 from "../../assets/food1.png";
+import food2 from "../../assets/food2.png";
 import "./Home.css";
 
 const Home = () => {
   const textRef = useRef(null);
+  const aboutRef = useRef(null);
 
   useEffect(() => {
+    // Show top overlay text
     const element = textRef.current;
     if (element) {
       element.classList.add("hidden-text");
@@ -18,6 +20,20 @@ const Home = () => {
         element.classList.add("show-text");
       }, 100);
     }
+
+    // Scroll animation for about section
+    const handleScroll = () => {
+      const about = aboutRef.current;
+      if (about) {
+        const rect = about.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          about.classList.add("show-about");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -42,8 +58,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+
       {/* New section below the image */}
-      <section className="about-section">
+      <section ref={aboutRef} className="about-section hidden-about">
         <div className="image-gallery ms-5">
           <img src={food1} alt="Food 1" className="food-image food-image-1" />
           <img src={food2} alt="Food 2" className="food-image food-image-2" />
@@ -63,6 +80,7 @@ const Home = () => {
           <button className="about-btn mt-5">ABOUT US</button>
         </div>
       </section>
+
       <FAQ />
       <Footer />
     </>
