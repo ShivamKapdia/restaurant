@@ -1,6 +1,7 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css"; // Create this CSS file for custom styles
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -34,9 +35,9 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/about">
                 About
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -44,9 +45,9 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link" to="/services">
                 Services
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
