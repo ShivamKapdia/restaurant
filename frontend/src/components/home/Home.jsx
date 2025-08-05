@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Navbar from "../navbar/Navbar.jsx";
+import FAQ from "../faq/FAQ.jsx";
+import Footer from "../footer/Footer.jsx";
 import img from "../../assets/bg-image2.png";
 import food1 from "../../assets/food1.png"; // Adjust the path as needed
 import food2 from "../../assets/food2.png"; // Adjust the path as needed
@@ -61,6 +63,8 @@ const Home = () => {
           <button className="about-btn mt-5">ABOUT US</button>
         </div>
       </section>
+      <FAQ />
+      <Footer />
     </>
   );
 };
