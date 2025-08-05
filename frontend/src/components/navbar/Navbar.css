@@ -1,5 +1,8 @@
 .navbar {
   padding: 15px 0;
+  position: sticky; /*sticky logic*/
+  top: 0; /*sticky logic*/
+  z-index: 1000; /*sticky logic*/
 }
 
 .navbar-brand {
