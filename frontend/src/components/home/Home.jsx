@@ -69,7 +69,6 @@ const Home = () => {
 
   return (
     <>
-      <Navbar />
       <div className="image-wrapper">
         <img src={img} alt="Shivam restaurant" className="faded-image" />
         <div ref={textRef} className="text-overlay hidden-text">
@@ -202,7 +201,6 @@ const Home = () => {
       </section>
 
       <FAQ ref={faqRef} />
-      <Footer />
     </>
   );
 };
