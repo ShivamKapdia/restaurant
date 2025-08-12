@@ -1,6 +1,57 @@
+import React, { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullname: "",
+    email: "",
+    mobile: "",
+    address: "",
+    message: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzI8-10UiFnQvUWqR1mWEg4M5YkAVV8XdbQztdUTq5fE2r0jwnbeKGf44-Zl0dnE72M/exec";
+
+    const formBody = new URLSearchParams(formData);
+
+    try {
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        body: formBody,
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      });
+
+      const text = await response.text();
+      if (response.ok && text.includes("Success")) {
+        alert("Form submitted successfully!");
+        setFormData({
+          fullname: "",
+          email: "",
+          mobile: "",
+          address: "",
+          message: "",
+        });
+      } else {
+        alert("Submission failed: " + text);
+      }
+    } catch (error) {
+      console.error("Error!", error);
+      alert("Something went wrong!");
+    }
+  };
+
   return (
     <div className="container my-5">
       <div className="text-center mb-4">
@@ -12,6 +63,7 @@ const Contact = () => {
       </div>
 
       <div className="row g-4">
+        {/* Location Card */}
         <div className="col-lg-6">
           <div className="card shadow h-100">
             <div className="card-body">
@@ -48,10 +100,11 @@ const Contact = () => {
           </div>
         </div>
 
+        {/* Contact Form Card */}
         <div className="col-lg-6">
           <div className="card shadow h-100">
             <div className="card-body">
-              <div className="needs-validation">
+              <form className="needs-validation" onSubmit={handleSubmit}>
                 {["fullname", "email", "mobile", "address"].map((field, i) => (
                   <div className="form-floating mb-3" key={i}>
                     <input
@@ -66,7 +119,9 @@ const Contact = () => {
                       id={field}
                       className="form-control"
                       placeholder={`Enter ${field}`}
-                      readOnly
+                      value={formData[field]}
+                      onChange={handleInputChange}
+                      required
                     />
                     <label htmlFor={field}>
                       {field.charAt(0).toUpperCase() +
@@ -83,21 +138,19 @@ const Contact = () => {
                     className="form-control"
                     placeholder="Your Message"
                     style={{ height: "120px" }}
-                    readOnly
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
                   ></textarea>
                   <label htmlFor="message">Message *</label>
                 </div>
 
                 <div className="text-end">
-                  <button
-                    type="button"
-                    className="btn btn-primary px-4"
-                    disabled
-                  >
+                  <button type="submit" className="btn btn-primary px-4">
                     SUBMIT
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
