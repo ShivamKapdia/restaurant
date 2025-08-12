@@ -1,13 +1,14 @@
-/* Reset (local scope suggestion: keep minimal reset) */
+/* Reset */
 .aboutpage-section * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: white; /* All fonts white */
 }
 
 /* About page section */
 .aboutpage-section {
-  background-color: #f5f5e0;
+  background-color: #5c4033; /* Dark background for contrast */
   padding: 128px 20px;
   display: flex;
   justify-content: space-between;
@@ -27,7 +28,7 @@
   height: 350px;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .aboutpage-food-image-1 {
@@ -45,7 +46,7 @@
 
 .aboutpage-crafted-tag {
   display: inline-block;
-  background: #5c4033;
+  background-color: #b68c60;
   color: white;
   padding: 5px 10px;
   margin-bottom: 10px;
@@ -58,19 +59,19 @@
   line-height: 1.2;
   margin-bottom: 20px;
   font-weight: bold;
-  color: #5c4033;
 }
 
 .aboutpage-btn {
-  background-color: #5c4033;
+  background-color: #b68c60;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .aboutpage-btn:hover {
-  background-color: #4a3428;
+  background-color: #d4ac0d;
 }
