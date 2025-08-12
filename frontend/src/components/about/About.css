@@ -75,3 +75,15 @@
 .aboutpage-btn:hover {
   background-color: #d4ac0d;
 }
+
+/* Animation for bottom-to-top reveal */
+.hidden-aboutpage {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.show-aboutpage {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import food1 from "../../assets/food1.png";
 import food2 from "../../assets/food2.png";
 import "./About.css";
 
 const About = () => {
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = aboutRef.current;
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          section.classList.add("show-aboutpage");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    // Trigger once in case it's already in view
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section className="aboutpage-section">
+    <section ref={aboutRef} className="aboutpage-section hidden-aboutpage">
       <div className="aboutpage-image-gallery ms-5">
         <img
           src={food1}
