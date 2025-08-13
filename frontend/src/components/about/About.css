@@ -1,12 +1,12 @@
-/* Reset */
-.aboutpage-section * {
+.aboutpage-section *,
+.aboutpage-secondary-section * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white; /* All fonts white */
 }
 
-/* About page section */
+/* About page primary section */
 .aboutpage-section {
   background-color: #5c4033; /* Dark background for contrast */
   padding: 128px 20px;
@@ -76,7 +76,7 @@
   background-color: #d4ac0d;
 }
 
-/* Animation for bottom-to-top reveal */
+/* Animation for primary about page section */
 .hidden-aboutpage {
   opacity: 0;
   transform: translateY(50px);
@@ -86,4 +86,110 @@
 .show-aboutpage {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* About page secondary section */
+.aboutpage-secondary-section {
+  background-color: #f5f5e0;
+  padding: 128px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.aboutpage-secondary-image-gallery {
+  display: flex;
+  gap: 20px;
+  max-width: 50%;
+}
+
+.aboutpage-secondary-food-image {
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutpage-secondary-food-image-1 {
+  transform: rotate(-5deg) translateY(-20px);
+}
+
+.aboutpage-secondary-food-image-2 {
+  transform: rotate(5deg) translateY(20px);
+}
+
+.aboutpage-secondary-content-box {
+  max-width: 50%;
+  padding-left: 20px;
+}
+
+.aboutpage-secondary-content-box * {
+  color: #5c4033; /* Override white text for this section */
+}
+
+.aboutpage-secondary-crafted-tag {
+  display: inline-block;
+  background: #5c4033;
+  color: white;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  transform: rotate(-4deg);
+}
+
+.aboutpage-secondary-section h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.aboutpage-secondary-btn {
+  background-color: #5c4033;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.aboutpage-secondary-btn:hover {
+  background-color: #4a3428;
+}
+
+/* Animation for secondary about page section */
+.hidden-aboutpage-secondary {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-in-out;
+}
+
+.show-aboutpage-secondary {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* New styles for features list */
+.aboutpage-secondary-features {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.aboutpage-secondary-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.aboutpage-secondary-features li::before {
+  content: "✔";
+  color: #5c4033;
+  margin-right: 10px;
+  font-size: 1.2rem;
 }
