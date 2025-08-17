@@ -1,14 +1,15 @@
+/* Existing styles remain unchanged */
 .aboutpage-section *,
 .aboutpage-secondary-section * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: white; /* All fonts white */
+  color: white;
 }
 
 /* About page primary section */
 .aboutpage-section {
-  background-color: #5c4033; /* Dark background for contrast */
+  background-color: #5c4033;
   padding: 128px 20px;
   display: flex;
   justify-content: space-between;
@@ -127,7 +128,7 @@
 }
 
 .aboutpage-secondary-content-box * {
-  color: #5c4033; /* Override white text for this section */
+  color: #5c4033;
 }
 
 .aboutpage-secondary-crafted-tag {
@@ -192,4 +193,82 @@
   color: #5c4033;
   margin-right: 10px;
   font-size: 1.2rem;
+}
+
+/* Mission page section */
+.missionpage-section {
+  padding: 20px 20px;
+  display: flex;
+  justify-content: flex-start; /* align left */
+  align-items: center;
+  background-color: #f5f5e0;
+}
+
+.missionpage-container {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  gap: 30px; /* space between radish & text */
+  margin-left: 50px; /* whole block starts 50px from left */
+  align-items: center;
+}
+
+.missionpage-left {
+  flex: 0 0 auto; /* radish takes only needed space */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.missionpage-radish {
+  width: 300px;
+  height: auto;
+  position: static; /* no absolute positioning */
+}
+
+.missionpage-right {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  color: #5c4033;
+}
+
+.missionpage-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.missionpage-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.missionpage-fresh-icon {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.missionpage-beans {
+  width: 150px;
+  height: auto;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+}
+
+/* Animation for mission page section */
+.hidden-missionpage {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-in-out;
+}
+
+.show-missionpage {
+  opacity: 1;
+  transform: translateY(0);
 }
