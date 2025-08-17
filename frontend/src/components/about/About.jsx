@@ -11,13 +11,16 @@ const About = () => {
   const aboutRef = useRef(null);
   const aboutSecondaryRef = useRef(null);
   const missionRef = useRef(null);
+  const radishRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
       const section = aboutRef.current;
       const secondarySection = aboutSecondaryRef.current;
       const missionSection = missionRef.current;
+      const radish = radishRef.current;
 
+      // Existing scroll animations for sections
       if (section) {
         const rect = section.getBoundingClientRect();
         if (rect.top <= window.innerHeight - 100) {
@@ -37,6 +40,31 @@ const About = () => {
         if (rect.top <= window.innerHeight - 100) {
           missionSection.classList.add("show-missionpage");
         }
+      }
+
+      // Parallax effect for radish within missionpage-section
+      if (radish && missionSection) {
+        const sectionRect = missionSection.getBoundingClientRect();
+        const sectionTop = sectionRect.top;
+        const sectionHeight = sectionRect.height;
+        const windowHeight = window.innerHeight;
+
+        // Calculate how much of the section is in view (0 to 1)
+        const scrollProgress = Math.max(
+          0,
+          Math.min(
+            1,
+            (windowHeight - sectionTop) / (windowHeight + sectionHeight)
+          )
+        );
+
+        // Parallax effect: move radish faster (opposite direction) but constrain within section
+        const parallaxSpeed = 1.5; // Speed multiplier (adjust as needed)
+        const maxOffset = sectionHeight * 0.5; // Limit movement to half the section height
+        const offset = scrollProgress * maxOffset * parallaxSpeed;
+
+        // Apply transform, negative to move up when scrolling down
+        radish.style.transform = `translateY(${-offset}px)`;
       }
     };
 
@@ -129,7 +157,12 @@ const About = () => {
       >
         <div className="missionpage-container">
           <div className="missionpage-left">
-            <img src={radish} alt="Radish" className="missionpage-radish" />
+            <img
+              ref={radishRef}
+              src={radish}
+              alt="Radish"
+              className="missionpage-radish"
+            />
           </div>
           <div
             className="missionpage-right"
