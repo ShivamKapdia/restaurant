@@ -92,7 +92,7 @@
 /* About page secondary section */
 .aboutpage-secondary-section {
   background-color: #f5f5e0;
-  padding: 128px 20px;
+  padding: 128px 20px 50px 20px; /* Reduced bottom padding to decrease space */
   display: flex;
   justify-content: space-between;
   align-items: center;
