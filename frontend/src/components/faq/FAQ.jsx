@@ -9,27 +9,24 @@ const FAQ = forwardRef(({ ...props }, ref) => {
   const faqs = [
     {
       question:
-        "How does the Dhule Municipal Corporation ensure confidentiality in the hospital license registration system?",
+        "Does your franchise offer both vegetarian and non-vegetarian options?",
       answer:
-        "The Dhule Municipal Corporation maintains strict confidentiality for hospital license data. Only authorized personnel, such as clerks, Assistant Medical Officers, and Medical Officers, can access sensitive information. Data is stored in a secure, encrypted digital system, and physical records are kept in restricted areas. Hospitals can request confidentiality agreements by contacting the health department. Breaches are investigated under applicable laws, ensuring data protection throughout the licensing process.",
+        "Our Franchise includes both vegetarian and non-vegetarian options, with Multiple choices clearly marked. We focus on clean, high-quality ingredients and bold flavors—ensuring there’s something delicious for everyone, no matter their preference.",
     },
     {
-      question:
-        "What are the steps to register a hospital license with the Dhule Municipal Corporation?",
+      question: "Where do you deliver?",
       answer:
-        "To register a hospital license, submit an application with hospital details (name, address, license type) and supporting documents via the Dhule Municipal Corporation’s online portal or at the health department office. Clerks verify initial data, followed by review from the Assistant Medical Officer and final approval by the Medical Officer. Check the status online using the application ID. Contact the helpline at 02562-XXX-XXXX for assistance or to resolve issues.",
+        "You can order directly via food delivery platforms like Swiggy and Zomato in select cities, with more locations coming soon!",
     },
     {
-      question:
-        "Who is eligible to apply for a hospital license under the Dhule Municipal Corporation?",
+      question: "Are your meals made fresh?",
       answer:
-        "Eligible applicants include hospital owners or authorized representatives operating within Dhule Municipal Corporation’s jurisdiction. Applicants must provide valid identification, proof of hospital ownership or lease agreement, and compliance certificates. Non-residents managing Dhule-based hospitals need legal authorization (e.g., power of attorney). All documents are verified against municipal records to ensure eligibility before processing the license application.",
+        "Absolutely. Every Hummazing meal is freshly prepared with hand-picked ingredients to ensure quality, flavor, and nutrition in every bite.",
     },
     {
-      question:
-        "How can I provide feedback on the Dhule Municipal Corporation’s hospital license system?",
+      question: "How can I get in touch for business or feedback?",
       answer:
-        "Feedback can be submitted through the Dhule Municipal Corporation’s website under the health services section or in writing at the health department office. Include specific suggestions, such as improving online tracking or adding multilingual support, along with your contact details. The department reviews feedback during monthly meetings, and shortlisted ideas may lead to follow-up discussions. Updates on implemented suggestions are posted quarterly on the municipal portal.",
+        "We’d love to hear from you! For business inquiries or feedback, please visit our Contact Us page or email us at example@gmail.com",
     },
   ];
 

@@ -67,7 +67,7 @@ const Contact = () => {
         <div className="col-lg-6">
           <div className="card shadow h-100">
             <div className="card-body">
-              <h3 className="card-title mb-3">Rajiv Gandhi Bhavan (NMC)</h3>
+              <h3 className="card-title mb-3">Restaurant</h3>
               <p className="card-text text-muted">
                 202G+46J, Tilak Wadi, Jeturkar Wadi, Sharanpur, Nashik,
                 Maharashtra 422002
