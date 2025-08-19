@@ -340,8 +340,13 @@ h2 {
   /* Hero Section */
   .text-overlay {
     width: 80%; /* Increase width for better readability */
-    top: 10%; /* Adjust positioning */
+    top: 15%;
     left: 5%;
+  }
+  .text-box {
+    padding: 0.4rem 0.8rem; /* Slightly smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+    margin-bottom: 0.8rem;
   }
   h1 {
     font-size: 2rem; /* Reduce font size */
@@ -402,10 +407,16 @@ h2 {
 }
 
 @media (max-width: 576px) {
-  /* Hero Section */
   .text-overlay {
-    width: 90%;
-    top: 5%;
+    width: 90%; /* Almost full width for mobile */
+    top: 10%; /* Further adjusted to avoid navbar overlap */
+    left: 3%;
+  }
+  .text-box {
+    padding: 0.3rem 0.6rem; /* Further reduced padding */
+    font-size: 0.8rem; /* Smaller font for mobile */
+    margin-bottom: 0.6rem;
+    transform: rotate(5deg); /* Preserve rotation */
   }
   h1 {
     font-size: 1.5rem;
