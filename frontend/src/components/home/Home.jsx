@@ -8,6 +8,7 @@ import food2 from "../../assets/food2.png";
 import fastDelivery from "../../assets/fast-delivery.png";
 import freshIngredients from "../../assets/fresh-incredients.png";
 import hygienicKitchens from "../../assets/hygienic-kitchens.png";
+import { NavLink } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
@@ -83,8 +84,16 @@ const Home = () => {
             lifestyle without compromising on taste or convenience.
           </p>
           <div className="button-group">
-            <button className="btn">OUR SERVICES</button>
-            <button className="btn">EXPLORE MENU</button>
+            <button className="btn">
+              <NavLink className="text-decoration-none" to="/services">
+                Our Services
+              </NavLink>
+            </button>
+            <button className="btn">
+              <NavLink className="text-decoration-none" to="/menu">
+                Explore Menu
+              </NavLink>
+            </button>
           </div>
         </div>
       </div>
@@ -107,7 +116,11 @@ const Home = () => {
             simple hummus recipe quickly became a flavorful movement. Friends
             and family said, "This isn’t just hummus... this is an emotion!"
           </p>
-          <button className="about-btn mt-5">ABOUT US</button>
+          <button className="about-btn mt-5">
+            <NavLink className="text-decoration-none" to="/about">
+              About Us
+            </NavLink>
+          </button>
         </div>
       </section>
 

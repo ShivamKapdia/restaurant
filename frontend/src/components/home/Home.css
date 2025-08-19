@@ -70,11 +70,16 @@ p {
 
 .btn {
   background-color: #5c4033;
-  color: white;
+  color: white; /* Ensure button text is white */
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   border-radius: 5px;
+}
+
+.btn a {
+  color: white; /* Explicitly set NavLink text to white */
+  text-decoration: none; /* Remove underline (already handled by NavLink class) */
 }
 
 .btn:hover {
@@ -146,6 +151,11 @@ h2 {
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
+}
+
+.about-btn a {
+  color: white; /* Ensure About Us NavLink text is white */
+  text-decoration: none; /* Remove underline */
 }
 
 .about-btn:hover {
