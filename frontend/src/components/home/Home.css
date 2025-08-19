@@ -18,6 +18,7 @@
   display: block;
   -webkit-mask-image: linear-gradient(to right, transparent, black);
   mask-image: linear-gradient(to right, transparent, black);
+  max-width: 100%; /* Ensure image scales properly */
 }
 
 .text-overlay {
@@ -44,10 +45,11 @@
 .text-box {
   background: transparent;
   border: 2px solid #333;
-  padding: 5px 10px;
+  padding: 0.5rem 1rem; /* Changed to rem for scalability */
   display: inline-block;
-  margin-bottom: 10px;
+  margin-bottom: 1rem; /* Changed to rem */
   transform: rotate(5deg);
+  font-size: 1rem; /* Explicit font size for consistency */
 }
 
 h1 {
@@ -334,13 +336,18 @@ h2 {
   transform: translateY(0);
 }
 
-/* Add to Home.css */
+/* Responsive adjustments */
 @media (max-width: 768px) {
   /* Hero Section */
   .text-overlay {
-    width: 80%; /* Increase width for better readability */
-    top: 10%; /* Adjust positioning */
+    width: 80%; /* Wider to fit content comfortably */
+    top: 10%; /* Closer to top for better spacing */
     left: 5%;
+  }
+  .text-box {
+    padding: 0.4rem 0.8rem; /* Slightly smaller padding */
+    font-size: 0.9rem; /* Smaller font size */
+    margin-bottom: 0.8rem;
   }
   h1 {
     font-size: 2rem; /* Reduce font size */
@@ -403,8 +410,15 @@ h2 {
 @media (max-width: 576px) {
   /* Hero Section */
   .text-overlay {
-    width: 90%;
-    top: 5%;
+    width: 90%; /* Almost full width for mobile */
+    top: 5%; /* Closer to top */
+    left: 3%;
+  }
+  .text-box {
+    padding: 0.3rem 0.6rem; /* Further reduced padding */
+    font-size: 0.8rem; /* Smaller font for mobile */
+    margin-bottom: 0.6rem;
+    transform: rotate(5deg); /* Preserve rotation */
   }
   h1 {
     font-size: 1.5rem;
