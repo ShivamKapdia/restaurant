@@ -106,6 +106,8 @@ p {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: rotate(-5deg);
+  max-width: 100%; /* Ensure image scales within container */
+  height: auto; /* Allow height to adjust proportionally */
 }
 
 .food-image-1 {
@@ -341,7 +343,7 @@ h2 {
   /* Hero Section */
   .text-overlay {
     width: 80%; /* Wider to fit content comfortably */
-    top: 10%; /* Closer to top for better spacing */
+    top: 15%; /* Increased to create space from navbar */
     left: 5%;
   }
   .text-box {
@@ -411,7 +413,7 @@ h2 {
   /* Hero Section */
   .text-overlay {
     width: 90%; /* Almost full width for mobile */
-    top: 5%; /* Closer to top */
+    top: 10%; /* Further adjusted to avoid navbar overlap */
     left: 3%;
   }
   .text-box {
@@ -433,7 +435,7 @@ h2 {
 
   /* About Section */
   .food-image {
-    width: 150px;
+    width: 150px; /* Smaller images for mobile */
     height: 210px;
   }
   h2 {
