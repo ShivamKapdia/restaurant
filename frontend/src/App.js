@@ -8,6 +8,7 @@ import Home from "./components/home/Home";
 import About from "./components/about/About";
 import Services from "./components/services/Services";
 import Contact from "./components/contact/Contact";
+import Menu from "./components/menu/Menu";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
