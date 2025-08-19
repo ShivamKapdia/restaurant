@@ -372,6 +372,9 @@ h2 {
     max-width: 100%; /* Full width */
     padding-left: 0;
   }
+  .image-gallery {
+    justify-content: center; /* Center images horizontally */
+  }
   .food-image {
     width: 200px; /* Smaller images */
     height: 280px;
@@ -443,6 +446,9 @@ h2 {
   }
   .content-box p {
     font-size: 1rem;
+  }
+  .image-gallery {
+    justify-content: center; /* Center images horizontally */
   }
 
   /* Testimonials Section */
