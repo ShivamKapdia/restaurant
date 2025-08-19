@@ -365,12 +365,12 @@ h2 {
   /* About Section */
   .about-section {
     flex-direction: column; /* Stack vertically */
-    padding: 60px 10px; /* Reduce padding further */
+    padding: 60px 20px; /* Reduce padding */
   }
-  .image-gallery {
+  .image-gallery,
+  .content-box {
     max-width: 100%; /* Full width */
-    gap: 10px; /* Reduce gap */
-    justify-content: center; /* Center images */
+    padding-left: 0;
   }
   .food-image {
     width: 200px; /* Smaller images */
@@ -434,15 +434,9 @@ h2 {
   }
 
   /* About Section */
-  .about-section {
-    padding: 40px 5px; /* Further reduce padding for small screens */
-  }
-  .image-gallery {
-    gap: 5px; /* Smaller gap for mobile */
-  }
   .food-image {
-    width: 120px; /* Further reduced for small screens */
-    height: 168px; /* Proportional height (120px * 350/250) */
+    width: 150px; /* Smaller images for mobile */
+    height: 210px;
   }
   h2 {
     font-size: 1.5rem;
@@ -457,19 +451,5 @@ h2 {
   }
   .testimonial-card {
     padding: 20px; /* Less padding */
-  }
-}
-
-@media (max-width: 320px) {
-  /* Extra small screens */
-  .food-image {
-    width: 100px; /* Minimum size for very small screens */
-    height: 140px; /* Proportional height (100px * 350/250) */
-  }
-  .about-section {
-    padding: 30px 0; /* Minimal padding */
-  }
-  .image-gallery {
-    gap: 2px; /* Minimal gap */
   }
 }
