@@ -11,7 +11,7 @@ const Navbar = () => {
     >
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
-          Logo Logo
+          Logo
         </a>
         <button
           className="navbar-toggler"
