@@ -27,6 +27,7 @@
   z-index: 10;
   width: 50%;
   transition: all 1s ease;
+  overflow: visible; /* Ensure content isn’t clipped */
 }
 
 .hidden-text {
@@ -72,7 +73,7 @@ p {
   background-color: #5c4033;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 15px; /* Reduced padding for mobile */
   cursor: pointer;
   border-radius: 5px;
 }
@@ -409,8 +410,9 @@ h2 {
 @media (max-width: 576px) {
   .text-overlay {
     width: 90%; /* Almost full width for mobile */
-    top: 10%; /* Further adjusted to avoid navbar overlap */
+    top: 15%; /* Increased to provide more vertical space */
     left: 3%;
+    min-height: 300px; /* Ensure enough space for content */
   }
   .text-box {
     padding: 0.3rem 0.6rem; /* Further reduced padding */
