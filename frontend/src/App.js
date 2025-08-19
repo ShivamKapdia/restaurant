@@ -9,10 +9,12 @@ import About from "./components/about/About";
 import Services from "./components/services/Services";
 import Contact from "./components/contact/Contact";
 import Menu from "./components/menu/Menu";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 const App = () => {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <ToastContainer toastClassName="toast-homepage" />
       <Routes>
