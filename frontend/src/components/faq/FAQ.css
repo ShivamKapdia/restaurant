@@ -85,3 +85,33 @@
 .faq-question:hover {
   background-color: #f0f0f0;
 }
+
+/* Add to FAQ.css */
+@media (max-width: 768px) {
+  .faq-container {
+    padding: 20px; /* Reduce padding */
+  }
+  .faq-title {
+    font-size: 2rem; /* Smaller title */
+  }
+  .faq-question {
+    padding: 10px; /* Less padding */
+    font-size: 1rem; /* Smaller question text */
+  }
+  .faq-answer {
+    padding: 10px;
+    font-size: 0.9rem; /* Smaller answer text */
+  }
+}
+
+@media (max-width: 576px) {
+  .faq-title {
+    font-size: 1.5rem;
+  }
+  .faq-question {
+    font-size: 0.9rem;
+  }
+  .faq-toggle {
+    font-size: 1rem; /* Smaller toggle icon */
+  }
+}

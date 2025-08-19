@@ -34,3 +34,24 @@
   font-weight: 500;
   color: #333;
 }
+
+/* Add to Navbar.css */
+@media (max-width: 991px) {
+  .nav-link {
+    margin: 0 10px; /* Reduce margin for tablet and mobile */
+    font-size: 1rem; /* Slightly smaller font size */
+  }
+  .contact-box {
+    display: none; /* Hide contact box on tablet and below to match d-none d-lg-block */
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-link {
+    margin: 5px 0; /* Stack nav links vertically with smaller margin on mobile */
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+  .navbar-nav {
+    text-align: center; /* Center nav links in mobile menu */
+  }
+}

@@ -333,3 +333,107 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Add to Home.css */
+@media (max-width: 768px) {
+  /* Hero Section */
+  .text-overlay {
+    width: 80%; /* Increase width for better readability */
+    top: 10%; /* Adjust positioning */
+    left: 5%;
+  }
+  h1 {
+    font-size: 2rem; /* Reduce font size */
+  }
+  p {
+    font-size: 1rem; /* Reduce paragraph size */
+  }
+  .btn {
+    padding: 8px 15px; /* Smaller buttons */
+    font-size: 0.9rem;
+  }
+
+  /* About Section */
+  .about-section {
+    flex-direction: column; /* Stack vertically */
+    padding: 60px 20px; /* Reduce padding */
+  }
+  .image-gallery,
+  .content-box {
+    max-width: 100%; /* Full width */
+    padding-left: 0;
+  }
+  .food-image {
+    width: 200px; /* Smaller images */
+    height: 280px;
+  }
+  h2 {
+    font-size: 1.8rem; /* Smaller heading */
+  }
+
+  /* Testimonials Section */
+  .testimonial-card {
+    width: 100%; /* Full width cards */
+    max-width: 400px; /* Prevent overly wide cards */
+  }
+  .testimonial-header .title {
+    font-size: 2rem; /* Smaller title */
+  }
+  .testimonial-header .description {
+    font-size: 1rem; /* Smaller description */
+  }
+
+  /* Features Section */
+  .features-section {
+    gap: 50px; /* Reduce gap */
+    padding: 40px 20px; /* Reduce padding */
+  }
+  .feature-item {
+    max-width: 100%; /* Flexible width */
+  }
+  .feature-image {
+    width: 80px; /* Smaller images */
+    height: 80px;
+  }
+  .feature-item h3 {
+    font-size: 1.5rem; /* Smaller heading */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Hero Section */
+  .text-overlay {
+    width: 90%;
+    top: 5%;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .button-group {
+    flex-direction: column; /* Stack buttons */
+    gap: 5px;
+  }
+
+  /* About Section */
+  .food-image {
+    width: 150px;
+    height: 210px;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .content-box p {
+    font-size: 1rem;
+  }
+
+  /* Testimonials Section */
+  .testimonial-grid {
+    gap: 20px; /* Smaller gap */
+  }
+  .testimonial-card {
+    padding: 20px; /* Less padding */
+  }
+}

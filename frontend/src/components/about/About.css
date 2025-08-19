@@ -276,3 +276,95 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Add to About.css */
+@media (max-width: 768px) {
+  /* About Primary Section */
+  .aboutpage-section {
+    flex-direction: column; /* Stack vertically */
+    padding: 60px 20px; /* Reduce padding */
+  }
+  .aboutpage-image-gallery,
+  .aboutpage-content-box {
+    max-width: 100%; /* Full width */
+    padding-left: 0;
+  }
+  .aboutpage-food-image {
+    width: 200px; /* Smaller images */
+    height: 280px;
+  }
+  .aboutpage-section h2 {
+    font-size: 1.8rem; /* Smaller heading */
+  }
+  .aboutpage-btn {
+    font-size: 0.9rem; /* Smaller button */
+  }
+
+  /* About Secondary Section */
+  .aboutpage-secondary-section {
+    flex-direction: column;
+    padding: 60px 20px; /* Reduce padding */
+  }
+  .aboutpage-secondary-image-gallery,
+  .aboutpage-secondary-content-box {
+    max-width: 100%;
+    padding-left: 0;
+  }
+  .aboutpage-secondary-food-image {
+    width: 200px;
+    height: 280px;
+  }
+  .aboutpage-secondary-section h2 {
+    font-size: 1.8rem;
+  }
+  .aboutpage-secondary-features li {
+    font-size: 1rem; /* Smaller list items */
+  }
+
+  /* Mission Section */
+  .missionpage-container {
+    flex-direction: column; /* Stack vertically */
+    margin-left: 0; /* Remove left margin */
+    gap: 20px;
+  }
+  .missionpage-radish {
+    width: 200px; /* Smaller radish */
+  }
+  .missionpage-right {
+    padding: 20px; /* Reduce padding */
+    min-height: auto; /* Remove fixed height */
+  }
+  .missionpage-title {
+    font-size: 2rem; /* Smaller title */
+  }
+  .missionpage-text {
+    font-size: 1rem; /* Smaller text */
+  }
+  .missionpage-fresh-icon,
+  .missionpage-beans {
+    width: 80px; /* Smaller icons */
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .aboutpage-food-image,
+  .aboutpage-secondary-food-image {
+    width: 150px;
+    height: 210px;
+  }
+  .aboutpage-section h2,
+  .aboutpage-secondary-section h2 {
+    font-size: 1.5rem;
+  }
+  .missionpage-radish {
+    width: 150px;
+  }
+  .missionpage-title {
+    font-size: 1.5rem;
+  }
+  .missionpage-text {
+    font-size: 0.9rem;
+  }
+}
