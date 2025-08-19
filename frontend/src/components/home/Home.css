@@ -18,7 +18,6 @@
   display: block;
   -webkit-mask-image: linear-gradient(to right, transparent, black);
   mask-image: linear-gradient(to right, transparent, black);
-  max-width: 100%; /* Ensure image scales properly */
 }
 
 .text-overlay {
@@ -106,8 +105,6 @@ p {
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: rotate(-5deg);
-  max-width: 100%; /* Ensure image scales within container */
-  height: auto; /* Allow height to adjust proportionally */
 }
 
 .food-image-1 {
@@ -338,18 +335,13 @@ h2 {
   transform: translateY(0);
 }
 
-/* Responsive adjustments */
+/* Add to Home.css */
 @media (max-width: 768px) {
   /* Hero Section */
   .text-overlay {
-    width: 80%; /* Wider to fit content comfortably */
-    top: 15%; /* Increased to create space from navbar */
+    width: 80%; /* Increase width for better readability */
+    top: 10%; /* Adjust positioning */
     left: 5%;
-  }
-  .text-box {
-    padding: 0.4rem 0.8rem; /* Slightly smaller padding */
-    font-size: 0.9rem; /* Smaller font size */
-    margin-bottom: 0.8rem;
   }
   h1 {
     font-size: 2rem; /* Reduce font size */
@@ -371,9 +363,6 @@ h2 {
   .content-box {
     max-width: 100%; /* Full width */
     padding-left: 0;
-  }
-  .image-gallery {
-    justify-content: center; /* Center images horizontally */
   }
   .food-image {
     width: 200px; /* Smaller images */
@@ -415,15 +404,8 @@ h2 {
 @media (max-width: 576px) {
   /* Hero Section */
   .text-overlay {
-    width: 90%; /* Almost full width for mobile */
-    top: 10%; /* Further adjusted to avoid navbar overlap */
-    left: 3%;
-  }
-  .text-box {
-    padding: 0.3rem 0.6rem; /* Further reduced padding */
-    font-size: 0.8rem; /* Smaller font for mobile */
-    margin-bottom: 0.6rem;
-    transform: rotate(5deg); /* Preserve rotation */
+    width: 90%;
+    top: 5%;
   }
   h1 {
     font-size: 1.5rem;
@@ -438,7 +420,7 @@ h2 {
 
   /* About Section */
   .food-image {
-    width: 150px; /* Smaller images for mobile */
+    width: 150px;
     height: 210px;
   }
   h2 {
@@ -446,9 +428,6 @@ h2 {
   }
   .content-box p {
     font-size: 1rem;
-  }
-  .image-gallery {
-    justify-content: center; /* Center images horizontally */
   }
 
   /* Testimonials Section */
