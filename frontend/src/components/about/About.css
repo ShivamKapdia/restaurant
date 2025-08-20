@@ -43,6 +43,7 @@
 .aboutpage-content-box {
   max-width: 50%;
   padding-left: 20px;
+  text-align: center;
 }
 
 .aboutpage-crafted-tag {
@@ -71,6 +72,8 @@
   border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
+  display: block;
+  margin: 0 auto;
 }
 
 .aboutpage-btn:hover {
@@ -92,7 +95,7 @@
 /* About page secondary section */
 .aboutpage-secondary-section {
   background-color: #f5f5e0;
-  padding: 128px 20px 50px 20px; /* Reduced bottom padding to decrease space */
+  padding: 128px 20px 50px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -125,6 +128,7 @@
 .aboutpage-secondary-content-box {
   max-width: 50%;
   padding-left: 20px;
+  text-align: center;
 }
 
 .aboutpage-secondary-content-box * {
@@ -156,36 +160,32 @@
   cursor: pointer;
   border-radius: 5px;
   font-size: 1rem;
+  display: block;
+  margin: 0 auto;
 }
 
 .aboutpage-secondary-btn:hover {
   background-color: #4a3428;
 }
 
-/* Animation for secondary about page section */
-.hidden-aboutpage-secondary {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 1s ease-in-out;
-}
-
-.show-aboutpage-secondary {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* New styles for features list */
+/* Updated styles for features list */
 .aboutpage-secondary-features {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin: 20px auto; /* Center the list horizontally */
+  display: flex;
+  flex-direction: column; /* Vertical single-line layout */
+  align-items: center; /* Center each li horizontally */
+  max-width: 60%; /* Limit width to control centering, adjust as needed */
 }
 
 .aboutpage-secondary-features li {
   display: flex;
-  align-items: center;
+  align-items: center; /* Vertically align checkmark and text */
   margin-bottom: 10px;
   font-size: 1.2rem;
+  text-align: center; /* Center the text relative to the li */
+  width: 100%; /* Ensure li takes full width of the list */
 }
 
 .aboutpage-secondary-features li::before {
@@ -193,13 +193,19 @@
   color: #5c4033;
   margin-right: 10px;
   font-size: 1.2rem;
+  flex-shrink: 0; /* Prevent checkmark from shrinking */
+}
+
+.aboutpage-secondary-features .feature-text {
+  flex: 1; /* Take available space */
+  text-align: center; /* Center the text within the span */
 }
 
 /* Mission page section */
 .missionpage-section {
   padding: 20px 20px;
   display: flex;
-  justify-content: flex-start; /* align left */
+  justify-content: flex-start;
   align-items: center;
   background-color: #f5f5e0;
 }
@@ -208,13 +214,13 @@
   display: flex;
   width: 100%;
   max-width: 1300px;
-  gap: 30px; /* space between radish & text */
-  margin-left: 50px; /* whole block starts 50px from left */
+  gap: 30px;
+  margin-left: 50px;
   align-items: center;
 }
 
 .missionpage-left {
-  flex: 0 0 auto; /* radish takes only needed space */
+  flex: 0 0 auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -223,18 +229,18 @@
 .missionpage-radish {
   width: 300px;
   height: auto;
-  position: static; /* no absolute positioning */
+  position: static;
 }
 
 .missionpage-right {
   flex: 1;
-  min-height: 450px; /* ensures taller box */
-  padding: 20px 150px 20px 20px; /* top, right, bottom, left */
+  min-height: 450px;
+  padding: 20px 150px 20px 20px;
   position: relative;
   color: #5c4033;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertically center text */
+  justify-content: center;
 }
 
 .missionpage-title {
@@ -277,38 +283,50 @@
   transform: translateY(0);
 }
 
-/* Add to About.css */
+/* Responsive styles */
 @media (max-width: 768px) {
   /* About Primary Section */
   .aboutpage-section {
-    flex-direction: column; /* Stack vertically */
-    padding: 60px 20px; /* Reduce padding */
+    flex-direction: column;
+    padding: 60px 20px;
+    align-items: center;
   }
   .aboutpage-image-gallery,
   .aboutpage-content-box {
-    max-width: 100%; /* Full width */
+    max-width: 100%;
     padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .aboutpage-image-gallery {
+    justify-content: center;
   }
   .aboutpage-food-image {
-    width: 200px; /* Smaller images */
+    width: 200px;
     height: 280px;
   }
   .aboutpage-section h2 {
-    font-size: 1.8rem; /* Smaller heading */
+    font-size: 1.8rem;
   }
   .aboutpage-btn {
-    font-size: 0.9rem; /* Smaller button */
+    font-size: 0.9rem;
   }
 
   /* About Secondary Section */
   .aboutpage-secondary-section {
     flex-direction: column;
-    padding: 60px 20px; /* Reduce padding */
+    padding: 60px 20px;
+    align-items: center;
   }
   .aboutpage-secondary-image-gallery,
   .aboutpage-secondary-content-box {
     max-width: 100%;
     padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .aboutpage-secondary-image-gallery {
+    justify-content: center;
   }
   .aboutpage-secondary-food-image {
     width: 200px;
@@ -317,32 +335,35 @@
   .aboutpage-secondary-section h2 {
     font-size: 1.8rem;
   }
+  .aboutpage-secondary-features {
+    max-width: 80%; /* Adjust width for smaller screens */
+  }
   .aboutpage-secondary-features li {
-    font-size: 1rem; /* Smaller list items */
+    font-size: 1rem;
   }
 
   /* Mission Section */
   .missionpage-container {
-    flex-direction: column; /* Stack vertically */
-    margin-left: 0; /* Remove left margin */
+    flex-direction: column;
+    margin-left: 0;
     gap: 20px;
   }
   .missionpage-radish {
-    width: 200px; /* Smaller radish */
+    width: 200px;
   }
   .missionpage-right {
-    padding: 20px; /* Reduce padding */
-    min-height: auto; /* Remove fixed height */
+    padding: 20px;
+    min-height: auto;
   }
   .missionpage-title {
-    font-size: 2rem; /* Smaller title */
+    font-size: 2rem;
   }
   .missionpage-text {
-    font-size: 1rem; /* Smaller text */
+    font-size: 1rem;
   }
   .missionpage-fresh-icon,
   .missionpage-beans {
-    width: 80px; /* Smaller icons */
+    width: 80px;
     top: 10px;
     right: 10px;
   }
@@ -357,6 +378,12 @@
   .aboutpage-section h2,
   .aboutpage-secondary-section h2 {
     font-size: 1.5rem;
+  }
+  .aboutpage-secondary-features {
+    max-width: 90%; /* Wider for very small screens */
+  }
+  .aboutpage-secondary-features li {
+    font-size: 0.9rem;
   }
   .missionpage-radish {
     width: 150px;

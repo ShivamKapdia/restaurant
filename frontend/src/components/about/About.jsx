@@ -20,7 +20,6 @@ const About = () => {
       const missionSection = missionRef.current;
       const radish = radishRef.current;
 
-      // Existing scroll animations for sections
       if (section) {
         const rect = section.getBoundingClientRect();
         if (rect.top <= window.innerHeight - 100) {
@@ -42,14 +41,12 @@ const About = () => {
         }
       }
 
-      // Parallax effect for radish within missionpage-section
       if (radish && missionSection) {
         const sectionRect = missionSection.getBoundingClientRect();
         const sectionTop = sectionRect.top;
         const sectionHeight = sectionRect.height;
         const windowHeight = window.innerHeight;
 
-        // Calculate how much of the section is in view (0 to 1)
         const scrollProgress = Math.max(
           0,
           Math.min(
@@ -58,18 +55,16 @@ const About = () => {
           )
         );
 
-        // Parallax effect: move radish faster (opposite direction) but constrain within section
-        const parallaxSpeed = 1.5; // Speed multiplier (adjust as needed)
-        const maxOffset = sectionHeight * 0.5; // Limit movement to half the section height
+        const parallaxSpeed = 1.5;
+        const maxOffset = sectionHeight * 0.5;
         const offset = scrollProgress * maxOffset * parallaxSpeed;
 
-        // Apply transform, negative to move up when scrolling down
         radish.style.transform = `translateY(${-offset}px)`;
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Trigger once in case it's already in view
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -140,12 +135,36 @@ const About = () => {
             as a healthy dip, spread, or bowl base.
           </p>
           <ul className="aboutpage-secondary-features">
-            <li>We Use Fresh and High-Quality Ingredients</li>
-            <li>We have Veg & Non-Veg Options</li>
-            <li>Our Creative Globally Inspired Flavors</li>
-            <li>We Provide Quick-Service & Fast Delivery</li>
-            <li>We Offer Scalable Business Model</li>
-            <li>We Help For Complete Franchisee Support</li>
+            <li>
+              <span className="feature-text">
+                We Use Fresh and High-Quality Ingredients
+              </span>
+            </li>
+            <li>
+              <span className="feature-text">
+                We have Veg & Non-Veg Options
+              </span>
+            </li>
+            <li>
+              <span className="feature-text">
+                Our Creative Globally Inspired Flavors
+              </span>
+            </li>
+            <li>
+              <span className="feature-text">
+                We Provide Quick-Service & Fast Delivery
+              </span>
+            </li>
+            <li>
+              <span className="feature-text">
+                We Offer Scalable Business Model
+              </span>
+            </li>
+            <li>
+              <span className="feature-text">
+                We Help For Complete Franchisee Support
+              </span>
+            </li>
           </ul>
           <button className="aboutpage-secondary-btn mt-5">ABOUT US</button>
         </div>
