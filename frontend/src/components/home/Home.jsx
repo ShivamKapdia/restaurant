@@ -19,7 +19,6 @@ const Home = () => {
   const testimonialsRef = useRef(null);
 
   useEffect(() => {
-    // Hero text animation
     const element = textRef.current;
     if (element) {
       element.classList.add("hidden-text");
@@ -28,7 +27,6 @@ const Home = () => {
       }, 100);
     }
 
-    // Scroll animations
     const handleScroll = () => {
       const about = aboutRef.current;
       const features = featuresRef.current;
@@ -116,11 +114,14 @@ const Home = () => {
             simple hummus recipe quickly became a flavorful movement. Friends
             and family said, "This isn’t just hummus... this is an emotion!"
           </p>
-          <button className="about-btn mt-5">
-            <NavLink className="text-decoration-none" to="/about">
-              About Us
-            </NavLink>
-          </button>
+          {/* Moved button inside content-box */}
+          <div className="about-btn-wrapper">
+            <button className="about-btn mt-5">
+              <NavLink className="text-decoration-none" to="/about">
+                About Us
+              </NavLink>
+            </button>
+          </div>
         </div>
       </section>
 

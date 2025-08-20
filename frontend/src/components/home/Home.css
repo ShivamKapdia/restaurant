@@ -44,11 +44,11 @@
 .text-box {
   background: transparent;
   border: 2px solid #333;
-  padding: 0.5rem 1rem; /* Changed to rem for scalability */
+  padding: 0.5rem 1rem;
   display: inline-block;
-  margin-bottom: 1rem; /* Changed to rem */
+  margin-bottom: 1rem;
   transform: rotate(5deg);
-  font-size: 1rem; /* Explicit font size for consistency */
+  font-size: 1rem;
 }
 
 h1 {
@@ -70,7 +70,7 @@ p {
 
 .btn {
   background-color: #5c4033;
-  color: white; /* Ensure button text is white */
+  color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -78,8 +78,8 @@ p {
 }
 
 .btn a {
-  color: white; /* Explicitly set NavLink text to white */
-  text-decoration: none; /* Remove underline (already handled by NavLink class) */
+  color: white;
+  text-decoration: none;
 }
 
 .btn:hover {
@@ -95,6 +95,7 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  position: relative;
 }
 
 .image-gallery {
@@ -123,6 +124,7 @@ p {
 .content-box {
   max-width: 50%;
   padding-left: 20px;
+  text-align: center;
 }
 
 .crafted-tag {
@@ -143,6 +145,11 @@ h2 {
   color: #5c4033;
 }
 
+.about-btn-wrapper {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .about-btn {
   background-color: #5c4033;
   color: white;
@@ -154,8 +161,8 @@ h2 {
 }
 
 .about-btn a {
-  color: white; /* Ensure About Us NavLink text is white */
-  text-decoration: none; /* Remove underline */
+  color: white;
+  text-decoration: none;
 }
 
 .about-btn:hover {
@@ -349,84 +356,92 @@ h2 {
 @media (max-width: 768px) {
   /* Hero Section */
   .text-overlay {
-    width: 80%; /* Increase width for better readability */
+    width: 80%;
     top: 15%;
     left: 5%;
   }
   .text-box {
-    padding: 0.4rem 0.8rem; /* Slightly smaller padding */
-    font-size: 0.9rem; /* Smaller font size */
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
     margin-bottom: 0.8rem;
   }
   h1 {
-    font-size: 2rem; /* Reduce font size */
+    font-size: 2rem;
   }
   p {
-    font-size: 1rem; /* Reduce paragraph size */
+    font-size: 1rem;
   }
   .btn {
-    padding: 8px 15px; /* Smaller buttons */
+    padding: 8px 15px;
     font-size: 0.9rem;
   }
 
   /* About Section */
   .about-section {
-    flex-direction: column; /* Stack vertically */
-    padding: 60px 20px; /* Reduce padding */
+    flex-direction: column;
+    padding: 60px 20px;
   }
   .image-gallery,
   .content-box {
-    max-width: 100%; /* Full width */
+    max-width: 100%;
     padding-left: 0;
   }
   .food-image {
-    width: 200px; /* Smaller images */
+    width: 200px;
     height: 280px;
   }
   h2 {
-    font-size: 1.8rem; /* Smaller heading */
+    font-size: 1.8rem;
+  }
+
+  /* Center the About Us button on smaller screens */
+  .about-btn {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+    display: block;
   }
 
   /* Testimonials Section */
   .testimonial-card {
-    width: 100%; /* Full width cards */
-    max-width: 400px; /* Prevent overly wide cards */
+    width: 100%;
+    max-width: 400px;
   }
   .testimonial-header .title {
-    font-size: 2rem; /* Smaller title */
+    font-size: 2rem;
   }
   .testimonial-header .description {
-    font-size: 1rem; /* Smaller description */
+    font-size: 1rem;
   }
 
   /* Features Section */
   .features-section {
-    gap: 50px; /* Reduce gap */
-    padding: 40px 20px; /* Reduce padding */
+    gap: 50px;
+    padding: 40px 20px;
   }
   .feature-item {
-    max-width: 100%; /* Flexible width */
+    max-width: 100%;
   }
   .feature-image {
-    width: 80px; /* Smaller images */
+    width: 80px;
     height: 80px;
   }
   .feature-item h3 {
-    font-size: 1.5rem; /* Smaller heading */
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 576px) {
   .text-overlay {
-    width: 90%; /* Almost full width for mobile */
-    top: 10%; /* Further adjusted to avoid navbar overlap */
+    width: 90%;
+    top: 10%;
     left: 3%;
   }
   .text-box {
-    padding: 0.3rem 0.6rem; /* Further reduced padding */
-    font-size: 0.8rem; /* Smaller font for mobile */
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
     margin-bottom: 0.6rem;
-    transform: rotate(5deg); /* Preserve rotation */
+    transform: rotate(5deg);
   }
   h1 {
     font-size: 1.5rem;
@@ -435,7 +450,7 @@ h2 {
     font-size: 0.9rem;
   }
   .button-group {
-    flex-direction: column; /* Stack buttons */
+    flex-direction: column;
     gap: 5px;
   }
 
@@ -453,9 +468,9 @@ h2 {
 
   /* Testimonials Section */
   .testimonial-grid {
-    gap: 20px; /* Smaller gap */
+    gap: 20px;
   }
   .testimonial-card {
-    padding: 20px; /* Less padding */
+    padding: 20px;
   }
 }
