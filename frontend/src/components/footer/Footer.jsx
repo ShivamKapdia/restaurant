@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import "./Footer.css";
 
 const Footer = () => {
@@ -16,11 +17,21 @@ const Footer = () => {
         </div>
 
         <div className="footer-nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#menu">Menu</a>
-          <a href="#contact">Contact</a>
+          <NavLink className="text-decoration-none" to="/">
+            Home
+          </NavLink>
+          <NavLink className="text-decoration-none" to="/about">
+            About
+          </NavLink>
+          <NavLink className="text-decoration-none" to="/services">
+            Services
+          </NavLink>
+          <NavLink className="text-decoration-none" to="/menu">
+            Menu
+          </NavLink>
+          <NavLink className="text-decoration-none" to="/contact">
+            Contact
+          </NavLink>
         </div>
 
         <div className="footer-social">
