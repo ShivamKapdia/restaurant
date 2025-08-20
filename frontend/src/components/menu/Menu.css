@@ -16,6 +16,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .menu-section {
@@ -77,5 +78,42 @@
   to {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .menu-section {
+    width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .menu-section {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    width: 100%; /* Full width on tablets */
+    max-width: 400px; /* Limit maximum width */
+    margin: 0 auto 20px; /* Center and add spacing */
+  }
+  .menu-sections {
+    gap: 15px; /* Reduce gap on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .menu-heading {
+    font-size: 2em;
+  }
+  .menu-section {
+    padding: 15px;
+    max-width: 300px; /* Further limit on mobile */
+  }
+  .menu-sections {
+    gap: 10px; /* Minimal gap on narrow screens */
   }
 }
