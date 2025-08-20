@@ -20,8 +20,12 @@
 
 .aboutpage-image-gallery {
   display: flex;
+  flex-wrap: nowrap !important; /* ✅ always side by side */
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   max-width: 50%;
+  flex-wrap: wrap; /* ✅ ensures responsiveness */
 }
 
 .aboutpage-food-image {
@@ -43,7 +47,7 @@
 .aboutpage-content-box {
   max-width: 50%;
   padding-left: 20px;
-  text-align: center;
+  text-align: center; /* ✅ center aligned */
 }
 
 .aboutpage-crafted-tag {
@@ -105,8 +109,12 @@
 
 .aboutpage-secondary-image-gallery {
   display: flex;
+  flex-direction: row; /* ✅ always side by side */
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   max-width: 50%;
+  flex-wrap: nowrap !important; /* ✅ ensures responsiveness */
 }
 
 .aboutpage-secondary-food-image {
@@ -128,7 +136,7 @@
 .aboutpage-secondary-content-box {
   max-width: 50%;
   padding-left: 20px;
-  text-align: center;
+  text-align: center; /* ✅ center aligned */
 }
 
 .aboutpage-secondary-content-box * {
@@ -172,20 +180,20 @@
 .aboutpage-secondary-features {
   list-style: none;
   padding: 0;
-  margin: 20px auto; /* Center the list horizontally */
+  margin: 20px auto;
   display: flex;
-  flex-direction: column; /* Vertical single-line layout */
-  align-items: center; /* Center each li horizontally */
-  max-width: 60%; /* Limit width to control centering, adjust as needed */
+  flex-direction: column;
+  align-items: center;
+  max-width: 60%;
 }
 
 .aboutpage-secondary-features li {
   display: flex;
-  align-items: center; /* Vertically align checkmark and text */
+  align-items: center;
   margin-bottom: 10px;
   font-size: 1.2rem;
-  text-align: center; /* Center the text relative to the li */
-  width: 100%; /* Ensure li takes full width of the list */
+  text-align: center;
+  width: 100%;
 }
 
 .aboutpage-secondary-features li::before {
@@ -193,12 +201,12 @@
   color: #5c4033;
   margin-right: 10px;
   font-size: 1.2rem;
-  flex-shrink: 0; /* Prevent checkmark from shrinking */
+  flex-shrink: 0;
 }
 
 .aboutpage-secondary-features .feature-text {
-  flex: 1; /* Take available space */
-  text-align: center; /* Center the text within the span */
+  flex: 1;
+  text-align: center;
 }
 
 /* Mission page section */
@@ -291,19 +299,23 @@
     padding: 60px 20px;
     align-items: center;
   }
-  .aboutpage-image-gallery,
+  .aboutpage-image-gallery {
+    margin-left: 0 !important; /* Remove Bootstrap ms-5 */
+    justify-content: center;
+    flex-direction: row; /* Ensure side by side */
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 100%; /* Allow full width for images */
+  }
   .aboutpage-content-box {
     max-width: 100%;
     padding-left: 0;
     text-align: center;
     margin: 0 auto;
   }
-  .aboutpage-image-gallery {
-    justify-content: center;
-  }
   .aboutpage-food-image {
-    width: 200px;
-    height: 280px;
+    width: 180px;
+    height: 250px;
   }
   .aboutpage-section h2 {
     font-size: 1.8rem;
@@ -318,25 +330,29 @@
     padding: 60px 20px;
     align-items: center;
   }
-  .aboutpage-secondary-image-gallery,
+  .aboutpage-secondary-image-gallery {
+    margin-left: 0 !important; /* Remove Bootstrap ms-5 */
+    justify-content: center;
+    flex-direction: row; /* Ensure side by side */
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 100%; /* Allow full width for images */
+  }
   .aboutpage-secondary-content-box {
     max-width: 100%;
     padding-left: 0;
     text-align: center;
     margin: 0 auto;
   }
-  .aboutpage-secondary-image-gallery {
-    justify-content: center;
-  }
   .aboutpage-secondary-food-image {
-    width: 200px;
-    height: 280px;
+    width: 180px;
+    height: 250px;
   }
   .aboutpage-secondary-section h2 {
     font-size: 1.8rem;
   }
   .aboutpage-secondary-features {
-    max-width: 80%; /* Adjust width for smaller screens */
+    max-width: 80%;
   }
   .aboutpage-secondary-features li {
     font-size: 1rem;
@@ -380,7 +396,7 @@
     font-size: 1.5rem;
   }
   .aboutpage-secondary-features {
-    max-width: 90%; /* Wider for very small screens */
+    max-width: 90%;
   }
   .aboutpage-secondary-features li {
     font-size: 0.9rem;
