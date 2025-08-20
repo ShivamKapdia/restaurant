@@ -356,9 +356,11 @@ h2 {
 @media (max-width: 768px) {
   /* Hero Section */
   .text-overlay {
-    width: 80%;
+    width: 90%;
     top: 15%;
-    left: 5%;
+    left: 50%; /* push to horizontal center */
+    transform: translateX(-50%); /* pull back by half */
+    text-align: center;
   }
   .text-box {
     padding: 0.4rem 0.8rem;
@@ -380,11 +382,18 @@ h2 {
   .about-section {
     flex-direction: column;
     padding: 60px 20px;
+    align-items: center; /* ensures vertical centering */
+  }
+  .image-gallery.ms-5 {
+    margin-left: 0 !important; /* remove Bootstrap spacing */
+    justify-content: center; /* center images */
   }
   .image-gallery,
   .content-box {
     max-width: 100%;
     padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
   }
   .food-image {
     width: 200px;
@@ -394,7 +403,7 @@ h2 {
     font-size: 1.8rem;
   }
 
-  /* Center the About Us button on smaller screens */
+  /* Center the About Us button */
   .about-btn {
     position: static;
     transform: none;
@@ -432,10 +441,13 @@ h2 {
 }
 
 @media (max-width: 576px) {
+  /* Hero Section */
   .text-overlay {
-    width: 90%;
+    width: 95%;
     top: 10%;
-    left: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
   }
   .text-box {
     padding: 0.3rem 0.6rem;
@@ -455,12 +467,21 @@ h2 {
   }
 
   /* About Section */
+  .image-gallery.ms-5 {
+    margin-left: 0 !important;
+    justify-content: center;
+  }
   .food-image {
     width: 150px;
     height: 210px;
   }
   h2 {
     font-size: 1.5rem;
+  }
+  .content-box {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
   }
   .content-box p {
     font-size: 1rem;
