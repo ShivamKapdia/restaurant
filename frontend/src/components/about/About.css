@@ -362,13 +362,16 @@
   .missionpage-container {
     flex-direction: column;
     margin-left: 0;
-    gap: 20px;
+    gap: 0px; /* Reduced gap to bring sections closer */
+  }
+  .missionpage-left {
+    justify-content: center; /* Center radish for better aesthetics */
   }
   .missionpage-radish {
     width: 200px;
   }
   .missionpage-right {
-    padding: 20px;
+    padding: 10px; /* Reduced padding to decrease space */
     min-height: auto;
   }
   .missionpage-title {
@@ -377,10 +380,14 @@
   .missionpage-text {
     font-size: 1rem;
   }
-  .missionpage-fresh-icon,
-  .missionpage-beans {
+  .missionpage-fresh-icon {
     width: 80px;
     top: 10px;
+    right: 10px;
+  }
+  .missionpage-beans {
+    width: 80px;
+    top: 100px; /* Adjusted to prevent overlap */
     right: 10px;
   }
 }
@@ -409,5 +416,15 @@
   }
   .missionpage-text {
     font-size: 0.9rem;
+  }
+  .missionpage-fresh-icon {
+    width: 60px;
+    top: 10px;
+    right: 10px;
+  }
+  .missionpage-beans {
+    width: 60px;
+    top: 80px; /* Further adjusted for smaller screens */
+    right: 10px;
   }
 }

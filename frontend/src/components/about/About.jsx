@@ -14,6 +14,8 @@ const About = () => {
   const radishRef = useRef(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth <= 768;
+
     const handleScroll = () => {
       const section = aboutRef.current;
       const secondarySection = aboutSecondaryRef.current;
@@ -41,7 +43,32 @@ const About = () => {
         }
       }
 
-      if (radish && missionSection) {
+      if (isMobile && radish && missionSection) {
+        const sectionRect = missionSection.getBoundingClientRect();
+        const sectionTop = sectionRect.top;
+        const windowHeight = window.innerHeight;
+        const titleHeight = 50; // Approximate height of the title for starting point
+
+        // Trigger movement when the section is in view
+        if (sectionTop <= windowHeight && sectionTop >= -sectionRect.height) {
+          const scrollProgress = Math.max(
+            0,
+            Math.min(1, (windowHeight - sectionTop) / windowHeight)
+          );
+          const maxOffsetY = 100; // Limit upward movement to 100px
+          const maxOffsetX = -50; // Move left by 50px
+          const offsetY = scrollProgress * maxOffsetY;
+          const offsetX = scrollProgress * maxOffsetX;
+
+          // Start movement from just above the title
+          radish.style.transform = `translate(${offsetX}px, ${
+            -titleHeight + offsetY
+          }px)`;
+        } else {
+          radish.style.transform = `translate(0, ${-titleHeight}px)`; // Initial position above title
+        }
+      } else if (!isMobile && radish && missionSection) {
+        // Desktop parallax (unchanged)
         const sectionRect = missionSection.getBoundingClientRect();
         const sectionTop = sectionRect.top;
         const sectionHeight = sectionRect.height;
