@@ -351,15 +351,46 @@ h2 {
   opacity: 1;
   transform: translateY(0);
 }
+@media (min-width: 769px) and (max-width: 1231px) {
+  .about-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
 
-/* Add to Home.css */
+  .image-gallery {
+    margin-left: 0 !important;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .content-box {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .food-image {
+    width: 200px;
+    height: 280px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
 @media (max-width: 768px) {
   /* Hero Section */
   .text-overlay {
     width: 90%;
     top: 15%;
-    left: 50%; /* push to horizontal center */
-    transform: translateX(-50%); /* pull back by half */
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
   }
   .text-box {
@@ -382,22 +413,27 @@ h2 {
   .about-section {
     flex-direction: column;
     padding: 60px 20px;
-    align-items: center; /* ensures vertical centering */
+    align-items: center; /* Ensure vertical centering */
+    justify-content: center; /* Ensure horizontal centering */
+    text-align: center; /* Center text within content-box */
   }
   .image-gallery.ms-5 {
-    margin-left: 0 !important; /* remove Bootstrap spacing */
-    justify-content: center; /* center images */
+    margin-left: 0 !important; /* Override Bootstrap ms-5 */
+    justify-content: center; /* Center images horizontally */
+    width: 100%; /* Ensure full width for centering */
   }
   .image-gallery,
   .content-box {
     max-width: 100%;
     padding-left: 0;
-    text-align: center;
-    margin: 0 auto;
+    padding-right: 0;
+    margin: 0 auto; /* Center the content box */
+    text-align: center; /* Center text within content-box */
   }
   .food-image {
     width: 200px;
     height: 280px;
+    margin: 0 auto; /* Center each image individually */
   }
   h2 {
     font-size: 1.8rem;
