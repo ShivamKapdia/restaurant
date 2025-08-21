@@ -17,9 +17,9 @@ const Footer = () => {
         </div>
 
         <div className="footer-nav">
-          <NavLink className="text-decoration-none" to="/">
+          {/* <NavLink className="text-decoration-none" to="/">
             Home
-          </NavLink>
+          </NavLink> */}
           <NavLink className="text-decoration-none" to="/about">
             About
           </NavLink>

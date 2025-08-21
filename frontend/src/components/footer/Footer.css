@@ -80,7 +80,6 @@
   margin: 0;
 }
 
-/* ----------- MOBILE RESPONSIVENESS ----------- */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column; /* Stack vertically */
@@ -92,7 +91,7 @@
   }
 
   .footer-nav {
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: row; /* Change to row for single line */
     gap: 10px;
     margin-top: 15px;
     align-items: center; /* Center nav links */
