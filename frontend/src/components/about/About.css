@@ -428,3 +428,56 @@
     right: 10px;
   }
 }
+
+@media (min-width: 769px) and (max-width: 1231px) {
+  .aboutpage-section,
+  .aboutpage-secondary-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+  }
+
+  .aboutpage-image-gallery,
+  .aboutpage-secondary-image-gallery {
+    margin-left: 0 !important;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    max-width: 100%;
+  }
+
+  .aboutpage-content-box,
+  .aboutpage-secondary-content-box {
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .aboutpage-food-image,
+  .aboutpage-secondary-food-image {
+    width: 180px;
+    height: 250px;
+  }
+
+  .aboutpage-section h2,
+  .aboutpage-secondary-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .missionpage-container {
+    flex-direction: column;
+    margin-left: 0;
+    gap: 0px;
+  }
+
+  .missionpage-left {
+    justify-content: center;
+  }
+
+  .missionpage-right {
+    padding: 10px;
+    min-height: auto;
+  }
+}
