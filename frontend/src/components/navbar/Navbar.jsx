@@ -6,15 +6,15 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav
-      className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "#F5F5E0", borderBottom: "3px solid #5C4033" }}
+      className="navbar navbar-expand-lg formal-navbar"
+      style={{ backgroundColor: "#FEFEFE", borderBottom: "2px solid #E8E8E8" }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          Logo
+        <a className="navbar-brand formal-brand" href="#">
+          <span className="brand-text">LOGO</span>
         </a>
         <button
-          className="navbar-toggler"
+          className="navbar-toggler formal-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -29,43 +29,43 @@ const Navbar = () => {
           id="navbarNav"
         >
           <button
-            className="close-sidebar d-lg-none"
+            className="close-sidebar d-lg-none formal-close"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
             aria-label="Close sidebar"
           >
             ✕
           </button>
-          <ul className="navbar-nav">
+          <ul className="navbar-nav formal-nav">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <a className="nav-link formal-link" href="/">
                 Home
               </a>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about">
+              <NavLink className="nav-link formal-link" to="/about">
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/menu">
+              <NavLink className="nav-link formal-link" to="/menu">
                 Menu
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/services">
+              <NavLink className="nav-link formal-link" to="/services">
                 Services
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contact">
+              <NavLink className="nav-link formal-link" to="/contact">
                 Contact Us
               </NavLink>
             </li>
           </ul>
         </div>
-        <div className="contact-box d-none d-lg-block">
-          <span>📞 +91 98765 43210</span>
+        <div className="contact-box formal-contact d-none d-lg-block">
+          <span className="contact-text">📞 +91 98765 43210</span>
         </div>
       </div>
     </nav>
