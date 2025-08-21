@@ -75,7 +75,7 @@ const Home = () => {
   return (
     <>
       <div className="image-wrapper">
-        <img src={img} alt="Shivam restaurant" className="faded-image" />
+        <img src={img} alt="Shivam restaurant" className="img-fluid" />
         <div ref={textRef} className="text-overlay hidden-text">
           <div className="text-box mb-4">HANDCRAFTED TASTY HUMMUS</div>
           <h1>
