@@ -1,8 +1,8 @@
 .navbar {
   padding: 20px 0;
-  position: sticky; /*sticky logic*/
-  top: 0; /*sticky logic*/
-  z-index: 1000; /*sticky logic*/
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-brand {
@@ -35,23 +35,90 @@
   color: #333;
 }
 
-/* Add to Navbar.css */
+/* Mobile-specific styles */
 @media (max-width: 991px) {
-  .nav-link {
-    margin: 0 10px; /* Reduce margin for tablet and mobile */
-    font-size: 1rem; /* Slightly smaller font size */
+  .navbar-brand {
+    font-size: 1.2rem;
   }
+
+  .nav-link {
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+
   .contact-box {
-    display: none; /* Hide contact box on tablet and below to match d-none d-lg-block */
+    display: none;
+  }
+
+  #navbarNav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    background-color: #f5f5e0;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    height: auto;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+  }
+
+  #navbarNav.show {
+    right: 0;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-toggler {
+    margin-left: 15px;
+  }
+
+  .close-sidebar {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    z-index: 1002; /* Ensure it stays above other content */
+  }
+
+  .close-sidebar:focus {
+    outline: none;
+  }
+}
+
+/* Hide close button on laptop view */
+@media (min-width: 992px) {
+  .close-sidebar {
+    display: none;
   }
 }
 
 @media (max-width: 576px) {
-  .nav-link {
-    margin: 5px 0; /* Stack nav links vertically with smaller margin on mobile */
-    font-size: 0.9rem; /* Further reduce font size */
+  .navbar-brand {
+    font-size: 1rem;
   }
+
+  .nav-link {
+    margin: 5px 0;
+    font-size: 0.9rem;
+  }
+
   .navbar-nav {
-    text-align: center; /* Center nav links in mobile menu */
+    text-align: center;
   }
 }

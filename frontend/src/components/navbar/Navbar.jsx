@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Navbar.css"; // Create this CSS file for custom styles
+import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  const navRef = useRef(null);
+
+  useEffect(() => {
+    const handleClose = () => {
+      if (navRef.current) {
+        navRef.current.classList.remove("show"); // ✅ manually close sidebar
+      }
+    };
+
+    const closeButton = document.querySelector(".close-sidebar");
+    if (closeButton) {
+      closeButton.addEventListener("click", handleClose);
+    }
+
+    // Cleanup
+    return () => {
+      if (closeButton) {
+        closeButton.removeEventListener("click", handleClose);
+      }
+    };
+  }, []);
+
   return (
     <nav
       className="navbar navbar-expand-lg"
@@ -16,18 +38,18 @@ const Navbar = () => {
         <button
           className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={() => navRef.current.classList.add("show")} // ✅ open manually
         >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div
-          className="collapse navbar-collapse justify-content-center"
+          className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
+          ref={navRef}
         >
+          <button className="close-sidebar" aria-label="Close sidebar">
+            ✕
+          </button>
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link" href="/">
