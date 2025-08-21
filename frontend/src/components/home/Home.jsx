@@ -62,6 +62,12 @@ const Home = () => {
       }
     };
 
+    // Check if mobile view and apply show-about immediately
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile && aboutRef.current) {
+      aboutRef.current.classList.add("show-about");
+    }
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -114,7 +120,6 @@ const Home = () => {
             simple hummus recipe quickly became a flavorful movement. Friends
             and family said, "This isn’t just hummus... this is an emotion!"
           </p>
-          {/* Moved button inside content-box */}
           <div className="about-btn-wrapper">
             <button className="about-btn mt-5">
               <NavLink className="text-decoration-none" to="/about">
