@@ -21,11 +21,9 @@ const Footer = () => {
             Home
           </NavLink> */}
           <NavLink className="text-decoration-none" to="/about">
-            About
+            About Us
           </NavLink>
-          <NavLink className="text-decoration-none" to="/services">
-            Services
-          </NavLink>
+
           <NavLink className="text-decoration-none" to="/menu">
             Menu
           </NavLink>
